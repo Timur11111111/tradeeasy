@@ -11,12 +11,12 @@ p {
 }
 
 a {
-    color:#bcc90d;
+    color:#12c064;
     text-decoration:none;
 }
 
 a:hover {
-    color:#2a0f4e;
+    color:#00a74f;
 }
 
 h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; }
@@ -235,43 +235,4 @@ a.like, a.follow { float:right; margin-top:-8px; }
     width:120px;
     height:120px;
     border-radius:50%;
-}
-
-/* users */
-#people-list img {
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    margin-bottom:20px;
-}
-#people-list .user {
-    width:180px;
-    float:left;
-    overflow:auto;
-    padding:10px;
-}
-#people-list .info { text-align:center; }
-img.user-detail {
-    border-radius:50%;
-    float:left;
-}
-.profile-info {
-    float:left;
-    overflow:auto;
-    margin-right:20px;
-}
-.image-container { margin-top:40px; }
-
-/* actions */
-.action {
-    clear:both;
-    overflow:auto;
-}
-.action .images {
-    float:left;
-    margin:0 10px 10px 0;
-}
-.action .date {
-    font-style:italic;
-    color:#ccc;
 }
