@@ -1,11 +1,12 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Dashboard{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Dashboard</h1>
-    <p>
-        Welcome to your dashboard. You can <a href="{% url 'edit' %}">edit your profile</a>
-        or <a href="{% url 'password_change' %}">change your password</a>.
-    </p>
+<h1>{% translate 'Home Page' %}</h1>
+<p>{% translate 'Welcome to your home page.' %}</p>
+<h3>{% translate 'Here you can go for' %} <a href="/">{% translate 'shopping!' %}</a></h3>
+<p>{% translate 'Here you can look into your' %} <a href="/">{% translate 'cart!' %}</a></p>
+
 {% endblock %}
