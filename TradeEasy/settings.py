@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +148,9 @@ EMAIL_HOST_USER = 'timur3373586@gmail.com'
 EMAIL_HOST_PASSWORD = 'ltkm hbug irov psmr'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+# Настроечные параметры Stripe
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51PrkcW027jH38nka4I9cff3xHCLi6zOmGRbUbOwgcGghyJLgme7Gvn5JLcgBS8TegYVHm0VlEMFUxolCnJ7rTK3100IJzdiOcP' # Публикуемый ключ
+STRIPE_SECRET_KEY = 'sk_test_51PrkcW027jH38nkaHNXkR1I2fyezuGWWAl4ImZim4GsiuQmlsSKOaPCls1hQaOE7wpOOMQCIUA3rZ5IOZqsV7HIC00M5KROodj' # Секретный ключ
+STRIPE_API_VERSION = '2022-08-01'
