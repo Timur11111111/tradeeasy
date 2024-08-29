@@ -2,6 +2,13 @@
 {
   "model": "contenttypes.contenttype",
   "fields": {
+    "app_label": "account",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
     "app_label": "admin",
     "model": "logentry"
   }
@@ -44,13 +51,6 @@
 {
   "model": "contenttypes.contenttype",
   "fields": {
-    "app_label": "account",
-    "model": "profile"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "fields": {
     "app_label": "shop",
     "model": "category"
   }
@@ -74,6 +74,14 @@
   "fields": {
     "app_label": "orders",
     "model": "orderitem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "izbsjibcrc3wrapxh14hyjpd2mopiyim",
+  "fields": {
+    "session_data": ".eJxVjEEOgyAURO_y14YAAqLL7nsG84FvpW2wRVw0xru3JN24mcW8N7ODx1xg2EHUeG-YSiwfGEQDrxw9wQCCc8Y5HEcDI25lHreV8hhDRXDqHPoHpQrCHdNtYX5JJUfHqsL-dGXXJdDz8ndPBzOu828trZ061VPwk7Kct1b3RgruJLUYVCCjtBW809qiFwqNbD0JkkJpZYicheML5A9EVg:1sjdqN:oOQTQZe9sqEiP_C9qdjyvHo4i3RrOnWoFonzgaXW-mU",
+    "expire_date": "2024-09-12T12:01:39.801Z"
   }
 },
 {
@@ -165,6 +173,50 @@
     "product": 1,
     "price": "100.00",
     "quantity": 1
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add profile",
+    "content_type": [
+      "account",
+      "profile"
+    ],
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change profile",
+    "content_type": [
+      "account",
+      "profile"
+    ],
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": [
+      "account",
+      "profile"
+    ],
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view profile",
+    "content_type": [
+      "account",
+      "profile"
+    ],
+    "codename": "view_profile"
   }
 },
 {
@@ -434,50 +486,6 @@
 {
   "model": "auth.permission",
   "fields": {
-    "name": "Can add profile",
-    "content_type": [
-      "account",
-      "profile"
-    ],
-    "codename": "add_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "fields": {
-    "name": "Can change profile",
-    "content_type": [
-      "account",
-      "profile"
-    ],
-    "codename": "change_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "fields": {
-    "name": "Can delete profile",
-    "content_type": [
-      "account",
-      "profile"
-    ],
-    "codename": "delete_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "fields": {
-    "name": "Can view profile",
-    "content_type": [
-      "account",
-      "profile"
-    ],
-    "codename": "view_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "fields": {
     "name": "Can add category",
     "content_type": [
       "shop",
@@ -655,7 +663,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$600000$xYZagZxkV2EKCWeDTYwm53$VbuHn1tqtKfU4uWYk5NmtlCZNr/Bs+9uNw6uO1jsNlc=",
-    "last_login": "2024-08-27T12:21:34.496Z",
+    "last_login": "2024-08-29T12:01:39.798Z",
     "is_superuser": true,
     "username": "Timur",
     "first_name": "",

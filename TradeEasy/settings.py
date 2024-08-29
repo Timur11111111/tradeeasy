@@ -87,16 +87,7 @@ WSGI_APPLICATION = 'TradeEasy.wsgi.application'
 #    }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'database',
-#         'USER': 'root',
-#         'PASSWORD': '21232123',
-#         'HOST': 'TradeEasy-db',  # This should match the service name of your PostgreSQL container
-#         'PORT': '5432',
-#     }
-# }
+
 
 
 DATABASES = {
