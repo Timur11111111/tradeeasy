@@ -32,6 +32,7 @@
 # volumes:
 #   postgres_data:
 
+
 services:
   web:
     build: .
@@ -47,6 +48,7 @@ services:
     depends_on:
       - db
       - rabbitmq
+      - celery
     environment:
       - DATABASE_HOST=db
       - DATABASE_NAME=database
@@ -73,22 +75,23 @@ services:
       - 5672:5672
       - 15672:15672
 
-
-worker:
+  celery:
     build: .
-    container_name: TradeEasy-worker
+    container_name: TradeEasy-celery
     restart: always
-    command: celery -A TradeEasy worker --loglevel=info
+    command: celery -A TradeEasy worker -l info
+    volumes:
+      - .:/app
     depends_on:
-      - web
+      - db
       - rabbitmq
     environment:
       - DATABASE_HOST=db
       - DATABASE_NAME=database
       - DATABASE_USER=root
       - DATABASE_PASSWORD=21232123
-
-
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
 
 volumes:
   postgres_data:
+
