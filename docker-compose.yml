@@ -32,7 +32,6 @@
 # volumes:
 #   postgres_data:
 
-
 services:
   web:
     build: .
@@ -92,6 +91,15 @@ services:
       - DATABASE_PASSWORD=21232123
       - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
 
+  stripe:
+    build: .
+    container_name: TradeEasy-stripe
+    restart: always
+    command: stripe listen --forward-to http://web:8000/payment/webhook/
+    depends_on:
+      - web
+    volumes:
+      - .:/app
+
 volumes:
   postgres_data:
-
