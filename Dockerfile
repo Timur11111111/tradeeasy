@@ -49,8 +49,4 @@ RUN pip install -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
-# Copy the Stripe CLI binary into /usr/local/bin
-COPY stripe /usr/local/bin/
 
-# Make sure the Stripe CLI binary is executable
-RUN chmod +x /usr/local/bin/stripe
