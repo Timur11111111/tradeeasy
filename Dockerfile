@@ -24,11 +24,6 @@
 
 # Используем официальный образ Python 3.10.5 в качестве базового образа
 
-# Используем официальный образ Python 3.10.5 в качестве базового образа
-
-
-
-
 # Dockerfile     wewe
 
 # Use an official Python runtime as a parent image
